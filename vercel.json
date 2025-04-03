@@ -11,5 +11,9 @@
       "src": "/(.*)",
       "dest": "/PyAIweb.py"
     }
-  ]
+  ],
+  "env": {
+    "FLASK_APP": "PyAIweb.py",
+    "FLASK_ENV": "production"
+  }
 }
