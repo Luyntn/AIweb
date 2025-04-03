@@ -1,10 +1,13 @@
-{
+﻿{
   "version": 2,
   "builds": [
     {
       "src": "PyAIweb.py",
-      "use": "@vercel/python"
-    }
+      "use": "@vercel/python",
+      "config": {
+        "pythonVersion": "3.09" // Bạn có thể thay đổi phiên bản này nếu Vercel hỗ trợ phiên bản Python mà bạn cần
+      }
+    }s
   ],
   "routes": [
     {
