@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Video AI</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <!-- Background Video -->
+    <video id="bg-video" autoplay loop muted>
+        <source id="video-source" src="{{ url_for('static', filename='video1.mp4') }}" type="video/mp4">
+        Trình duyệt của bạn không hỗ trợ video.
+    </video>
+
+    <!-- Chat Container -->
+    <div class="chat-container">
+        <div class="chat-box" id="chat-box"></div>
+        <div class="input-area">
+            <input type="text" id="chat-input" placeholder="Nhập tin nhắn...">
+            <button id="send-btn">Gửi</button>
+            <!-- Nút Trả lời -->
+            <button id="answer-btn">Trả lời</button>
+            <button id="clear-btn">Xóa</button>
+        </div>
+    </div>
+
+    <div class="ai-selection" id="ai-selection">
+        <button class="ai-btn" onclick="selectAI('Tiểu Hồ Ly', '{{ url_for('static', filename='video.mp4') }}')">THL</button>
+        <button class="ai-btn" onclick="selectAI('Lưu Duyệt Phi', '{{ url_for('static', filename='video2.mp4') }}')">LDP</button>
+    </div>
+
+    <!-- Liên kết tới tệp JavaScript -->
+    <script src="{{ url_for('static', filename='scripts.js') }}"></script>
+</body>
+</html>
